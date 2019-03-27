@@ -1,0 +1,58 @@
+<!DOC TYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Movies</title>
+<link rel="stylesheet" type="text/css" href="movie.css" />
+<script>
+function get(id){
+	return document.getElementById(id);
+}
+function change(index){
+	let origin=get("origin");
+	let asia=get("asia");
+	let europe=get("europe");
+	let oceania=get("oceania");
+	if (index==0){ 
+	origin.className="hide";
+	asia.className="appear";
+	europe.className="hide";
+	oceania.className="hide";
+	}
+	else if (index==1){
+	origin.className="hide";
+	asia.className="hide";
+	europe.className="appear";
+	oceania.className="hide";
+	}
+	else if (index==2){
+	origin.className="hide";
+	asia.className="hide";
+	europe.className="hide";
+	oceania.className="appear";
+	}
+}
+</script>
+</head>
+<body>
+	<h3 class="center" >Go Around the World <span>不要怕! 出走 就對了!</span></h3>
+	<div class="center">
+		<input class="button" type="button" value="Asia" onclick="change(0);" />
+		<input class="button" type="button" value="Europe" onclick="change(1);" />
+		<input class="button" type="button" value="Oceania" onclick="change(2);" />
+	</div>
+	<div class="center">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHw3sxE52wcoCdVff-vLm70G6h2mqvLvDIXx7iojcml3oDqHm8" 
+			id="origin"  style="margin:10px;" />
+		<span id="asia" class="current" >
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr3_LbRiZmy3sxA80rFqTQxYQVizWO38jyeRjtTk9Xqy_C5XY4lQ" 
+			 />
+			<span>Taiwan</br>Japan</br>Korea</br>Thailand</br>Vietnam</span>	
+		</span>	
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSY5tG9HFPB_quAl7vq5G-yyicBJHQ52gb80xRCWexL-WqlB9h-g" 
+			id="europe" class="current" />
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAf8p7SD5lsn-YpPwyHjdJnKgM1ApWV1z9NtBX5dGXPtxG8-taBQ" 
+			id="oceania" class="current" />
+	</div>
+</body>
+</html>
