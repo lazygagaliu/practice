@@ -1,0 +1,25 @@
+.center{ /* 問一下 */
+	width:100%;
+	/*必須要寫在大箱子裡面,小箱子即可並排*/
+	display:flex;
+	/*水平對齊 flex-start置左 flex-end置右*/
+	justify-content:center;
+	/*垂直對齊 flex-start置上 flex-end置下*/
+	align-items:center;
+	/*內層的block元件相對外層的block元件, 置中*/
+	margin-left:auto;margin-right:auto;
+}
+.button{
+	margin:10px;
+	
+}
+.current{
+	display:none;
+}
+.hide{
+	display:none;
+}
+.appear{
+	display:block;
+	margin:10px;
+}
